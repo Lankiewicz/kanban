@@ -14,7 +14,7 @@ function Column(id, name) {
 		var $columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
 
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
-		$columnDelete.click(function() {
+		columnDelete.click(function() {
 			self.deleteColumn();
 		});
 
