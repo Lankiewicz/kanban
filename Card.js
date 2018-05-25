@@ -22,12 +22,12 @@ function Card(id, name) {
 	}
 }
 removeCard: function() {
-    var self = this;
-    $.ajax({
-      url: baseUrl + '/card/' + self.id,
-      method: 'DELETE',
-      success: function(){
-        self.$element.remove();
-      }
-    });
+	var self = this;
+	$.ajax({
+		url: baseUrl + '/card/' + self.id,
+		method: 'DELETE',
+		success: function() {
+			self.$element.remove();
+		}
+	});
 }
