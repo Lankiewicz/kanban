@@ -30,4 +30,18 @@ removeCard: function() {
 			self.$element.remove();
 		}
 	});
+Column.prototype = {
+		createCard: function(card) {
+			this.element.children('ul').append(card.element);
+		},
+		removeCard: function() {
+			var self = this;
+			$.ajax({
+				url: baseUrl + '/card/' + self.id,
+				method: 'DELETE',
+				success: function() {
+					self.$element.remove();
+				}
+			});
+		}
 }
